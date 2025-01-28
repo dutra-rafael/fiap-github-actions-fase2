@@ -11,6 +11,3 @@ jobs:
         steps:
         - name: Checkout code
           uses: actions/checkout@v2
-          
-        - name: Mensagem de execucao
-          uses: echo "Ola mundo."
