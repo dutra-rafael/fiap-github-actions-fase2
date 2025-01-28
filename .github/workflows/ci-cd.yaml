@@ -5,12 +5,21 @@ on:
         branches: [ main ]
 
 jobs:
-    job_test:
+    build_and_test:
         name: Executando job de teste
         runs-on: ubuntu-latest
+        
         steps:
         - name: Checkout code
           uses: actions/checkout@v2
           
         - name: Teste de mensagem
-          uses: echo "teste de mensagem nova"
+          uses: actions/setup-node@v2
+          with:
+            node-version: '14'
+            
+        - name: Install dependecies
+          run: npm install
+          
+        - name: Run tests
+          run: npm test
