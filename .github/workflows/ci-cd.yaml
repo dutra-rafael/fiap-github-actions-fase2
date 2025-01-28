@@ -11,3 +11,6 @@ jobs:
         steps:
         - name: Checkout code
           uses: actions/checkout@v2
+          
+        - name: Teste de mensagem
+          uses: echo "teste de mensagem nova"
